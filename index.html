@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greek Yogurt | SheCodes Basics Project</title>
+    <style>
+      body {
+        background-color: #f9f7fe;
+        color: #272142;
+        font-family: "Cerebri Sans";
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        margin: 15px 0;
+        font-weight: bold;
+      }
+
+      h1 {
+        color: #885df1;
+        font-size: 38px;
+        line-height: 48px;
+      }
+
+      h2 {
+        font-size: 24px;
+        color: #272142;
+        font-family: "PT Mono", monospace;
+        line-height: 27px;
+      }
+
+      a {
+        color: #885df1;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      img {
+        border-radius: 12px;
+        max-width: 100%;
+      }
+
+      button {
+        background: #885df1;
+        color: white;
+        display: block;
+        margin: 30px auto;
+        width: 90%;
+        border-radius: 50px;
+        border: none;
+        font-size: 24px;
+        font-family: "Cerebri Sans";
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 90%;
+      }
+
+      small {
+        text-align: center;
+        display: block;
+        font-size: 16px;
+        font-family: "PT Mono", monospace;
+      }
+
+      /* Style the header with a grey background and some padding */
+      .header {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        padding: 20px 10px;
+      }
+
+      /* Style the header links */
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      /* Change the background color on mouse-over */
+      .header a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Style the active/current link*/
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      /* Float the link section to the right */
+      .header-right {
+        float: right;
+      }
+
+      /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .header-right {
+          float: none;
+        }
+      }
+
+      .container {
+        box-shadow: 0px 30px 50px rgba(65, 50, 100, 0.12);
+        margin: 50px auto;
+        background: #fff;
+        max-width: 550px;
+        padding: 40px;
+        border-radius: 16px;
+      }
+
+      .description {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 20px;
+      }
+
+      .logo {
+        max-width: 200px;
+        display: block;
+        margin: 0 auto 40px;
+      }
+
+      .yogurt-picture {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#default" class="logo">CompanyLogo</a>
+      <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+    <div class="container">
+      <a href="https://www.shecodes.io/" target="_blank">
+        <img
+          src="https://drive.google.com/file/d/1x_vQw6Vd5ACPAxbiqWp3v8AtvA-zAZfa/view?usp=sharing"
+          class="logo"
+          alt="SheCodes Logo"
+        />
+      </a>
+      <h1>I Love Yogurt</h1>
+      <h2>Especially Greek Yogurt</h2>
+      <!-- https://drive.google.com/file/d/1x_vQw6Vd5ACPAxbiqWp3v8AtvA-zAZfa/view?usp=sharing -->
+      <img
+        src="https://drive.google.com/uc?export=view&id=1x_vQw6Vd5ACPAxbiqWp3v8AtvA-zAZfa"
+        class="yogurt-picture"
+        alt="Yogurt"
+      />
+      <div class="description">
+        <p>
+          Strained yogurt, Greek yogurt, yogurt cheese, sack yogurt, or kerned
+          yogurt is yogurt that has been strained to remove most of its whey,
+          resulting in a thicker consistency than normal, while still preserving
+          the distinctive sour taste. Give it a try!
+          <br /><br />
+          📖
+          <a href="https://en.wikipedia.org/wiki/Strained_yogurt">
+            <strong> Read on Wikipedia </strong>
+          </a>
+        </p>
+      </div>
+      <button>Order Greek Yogurt</button>
+      <p>
+        <small>
+          Coded by 👩‍💻
+          <a href="https://www.shecodes.io" target="_blank">SheCodes</a> with
+          HTML, CSS and JavaScript
+        </small>
+      </p>
+    </div>
+    <script>
+      function order() {
+        let quanty = prompt("How many cups would you like?");
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email?");
+
+        alert(
+          "Thanks " +
+            name +
+            "! We'll be in touch soon with more details. Feel free to contact us if you have any questions hello@shecodes.io"
+        );
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", order);
+    </script>
+  </body>
+</html>
